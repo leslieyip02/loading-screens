@@ -1,0 +1,70 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    background-color: #dddddd;
+}
+
+.circle {
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.circle--halved {
+    background: linear-gradient(#eeeeee 50%, #555555 50%);
+}
+
+.ring {
+    border: 1rem solid #eeeeee;
+    border-top: 1rem solid #4169e1;
+}
+
+.ring--double {
+    border-top: 1rem solid #555555;
+    border-bottom: 1rem solid #555555;
+}
+
+.spin--linear {
+    animation: spin 3s linear infinite;
+}
+
+.spin--ease {
+    animation: spin 3s ease infinite;
+}
+
+.spin--3d {
+    background-color: #4169e1;
+    animation: spin-3d 3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin-3d {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
