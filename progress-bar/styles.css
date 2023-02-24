@@ -1,0 +1,67 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #dddddd;
+}
+
+.bar {
+    width: 50vw;
+    height: 2rem;
+    margin: auto;
+    border: 0.25rem solid #555555;
+}
+
+.bar--rounded {
+    border-radius: 2rem;
+}
+
+.bar--padded {
+    padding: 0.1rem;
+}
+
+.progress {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    background-color: #555555;
+}
+
+.progress--rounded {
+    border-radius: 2rem;
+}
+
+.progress--striped {
+    background: repeating-linear-gradient(315deg,
+            #eeeeee 0rem, #eeeeee 1rem, #555555 1rem, #555555 2rem);
+}
+
+.progress--ease {
+    background-color: #4169e1;
+    animation: load 3s infinite ease;
+}
+
+.progress--constant {
+    animation: load 3s infinite linear;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
