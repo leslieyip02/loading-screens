@@ -1,0 +1,161 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5dc;
+}
+
+.hourglass {
+    position: relative;
+    margin: auto;
+    width: 12rem;
+    height: 16rem;
+    animation: flip 12s ease infinite;
+}
+
+@keyframes flip {
+    0% {
+        rotate: 0deg;
+    }
+
+    65% {
+        rotate: 0deg;
+    }
+
+    80% {
+        rotate: 180deg;
+    }
+
+    100% {
+        rotate: 180deg;
+    }
+}
+
+.hourglass__base {
+    position: absolute;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: #b29057;
+}
+
+.hourglass__base--top {
+    top: 14rem;
+}
+
+.hourglass__half {
+    position: absolute;
+    top: 0.25rem;
+    left: 1rem;
+    width: 10rem;
+    height: 8rem;
+    border-radius: 0rem 0rem 4rem 4rem;
+    background-color: #dddddd;
+}
+
+.hourglass__half--bottom {
+    top: 7.75rem;
+    rotate: 180deg;
+}
+
+.sand__pile {
+    position: absolute;
+    width: 9.2rem;
+    height: 4rem;
+    border-radius: 0rem 0rem 5rem 5rem;
+    background: linear-gradient(0deg, #f3c77b 0 50%, transparent 0);
+    background-size: 9.2rem 8rem;
+}
+
+.sand__pile--top {
+    top: 4rem;
+    left: 1.4rem;
+    animation: deplete 12s ease-in infinite;
+}
+
+@keyframes deplete {
+    0% {
+        background-position-y: 100%;
+    }
+
+    60% {
+        background-position-y: 0%;
+    }
+
+    100% {
+        background-position-y: 0%;
+    }
+}
+
+.sand__pile--bottom {
+    top: 14rem;
+    left: 1.4rem;
+    rotate: 180deg;
+    animation: pile-up 12s ease-in infinite;
+}
+
+@keyframes pile-up {
+    0% {
+        top: 14rem;
+        background-position-y: 0%;
+    }
+
+    60% {
+        top: 10rem;
+        background-position-y: 100%;
+    }
+
+    75% {
+        top: 10rem;
+        background-position-y: 100%;
+    }
+
+    85% {
+        top: 8rem;
+        background-position-y: 100%;
+    }
+
+    100% {
+        top: 8rem;
+        background-position-y: 100%;
+    }
+}
+
+.sand__grain {
+    position: absolute;
+    top: 7.8rem;
+    left: 5.5rem;
+    width: 1rem;
+    height: 0.2rem;
+    background-color: #f3c77b;
+    opacity: 100%;
+    animation: fall 12s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: 7.8rem;
+        opacity: 100%;
+    }
+
+    10% {
+        top: 13.8rem;
+        opacity: 0%;
+    }
+
+    100% {
+        top: 13.8rem;
+        opacity: 0%;
+    }
+}
