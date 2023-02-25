@@ -16,14 +16,11 @@ body {
 }
 
 .circle {
+    position: relative;
     width: 5rem;
     height: 5rem;
     margin: auto;
     border-radius: 50%;
-}
-
-.circle--halved {
-    background: linear-gradient(#eeeeee 50%, #555555 50%);
 }
 
 .ring {
@@ -36,17 +33,46 @@ body {
     border-bottom: 1rem solid #555555;
 }
 
+.ring__grow {
+    position: absolute;
+    border: 0.5rem solid #eeeeee;
+    border-radius: 50%;
+    opacity: 100%;
+    animation: grow 4s ease-in-out infinite;
+}
+
+.ring__grow--delay {
+    animation-delay: 2s;
+}
+
+@keyframes grow {
+    0% {
+        top: 2.5rem;
+        left: 2.5rem;
+        width: 0rem;
+        height: 0rem;
+        opacity: 100%;
+    }
+
+    75% {
+        opacity: 100%;
+    }
+
+    100% {
+        top: 0rem;
+        left: 0rem;
+        width: 5rem;
+        height: 5rem;
+        opacity: 0%;
+    }
+}
+
 .spin--linear {
     animation: spin 3s linear infinite;
 }
 
 .spin--ease {
     animation: spin 3s ease infinite;
-}
-
-.spin--3d {
-    background-color: #4169e1;
-    animation: spin-3d 3s linear infinite;
 }
 
 @keyframes spin {
@@ -59,9 +85,19 @@ body {
     }
 }
 
+.spin--3d {
+    background-color: #4169e1;
+    animation: spin-3d 3s linear infinite;
+}
+
 @keyframes spin-3d {
     0% {
         transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(180deg);
+        background-color: #00008b;
     }
 
     100% {
