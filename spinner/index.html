@@ -9,12 +9,27 @@
     </head>
 
     <body>
-        <div class="circle ring spin--linear"></div>
-        <div class="circle ring ring--double spin--ease"></div>
-        <div class="circle spin--3d"></div>
-        <div class="circle">
-            <div class="ring__grow"></div>
-            <div class="ring__grow ring__grow--delay"></div>
+        <div class="spinner ring ring--blue spin--linear"></div>
+        <div class="spinner ring ring--grey spin--ease"></div>
+
+        <div class="spinner">
+            <div class="ring ring__nested ring--blue spin--linear"></div>
+            <div class="ring ring__nested ring__nested--inner ring--blue spin--inner"></div>
+        </div>
+
+        <div class="spinner">
+            <div class="ring ring__nested grow"></div>
+            <div class="ring ring__nested grow grow--delay"></div>
+        </div>
+
+        <div class="spinner">
+            <div class="ring ring__nested"></div>
+            <div class="ring ring__nested ring__nested--inner pulse"></div>
+        </div>
+
+        <div class="spinner">
+            <div class="ring ring__nested ring--chrome grow--spin"></div>
+            <div class="ring ring__nested ring--chrome grow--spin grow--delay"></div>
         </div>
     </body>
 </html>
