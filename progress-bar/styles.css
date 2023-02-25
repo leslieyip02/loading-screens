@@ -1,12 +1,12 @@
 html {
-    margin: 0;
-    padding: 0;
+    margin: 0rem;
+    padding: 0rem;
     height: 100%;
     overflow: hidden;
 }
 
 body {
-    margin: 0;
+    margin: 0rem;
     height: 100%;
     padding: 5rem;
     box-sizing: border-box;
@@ -43,7 +43,7 @@ body {
 }
 
 .progress--striped {
-    background: repeating-linear-gradient(315deg,
+    background: repeating-linear-gradient(315deg, 
             #eeeeee 0rem, #eeeeee 1rem, #555555 1rem, #555555 2rem);
 }
 
