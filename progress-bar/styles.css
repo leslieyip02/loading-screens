@@ -39,7 +39,7 @@ body {
 }
 
 .progress--rounded {
-    border-radius: 2rem;
+    border-radius: inherit;
 }
 
 .progress--striped {
@@ -49,19 +49,41 @@ body {
 
 .progress--ease {
     background-color: #4169e1;
-    animation: load 3s infinite ease;
+    animation: load 3s ease infinite;
 }
 
 .progress--constant {
-    animation: load 3s infinite linear;
+    animation: load 3s linear infinite;
+}
+
+.progress--fade {
+    animation: fade 5s linear infinite;
+    opacity: 100%;
 }
 
 @keyframes load {
     0% {
-        width: 0%;
+        width: 1rem;
     }
 
     100% {
         width: 100%;
+    }
+}
+
+@keyframes fade {
+    0% {
+        width: 0%;
+        opacity: 100%;
+    }
+
+    50% {
+        width: 100%;
+        opacity: 100%;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 00%;
     }
 }
