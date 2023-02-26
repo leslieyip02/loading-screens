@@ -42,8 +42,13 @@ body {
     border-radius: inherit;
 }
 
+.progress--dashed {
+    background: repeating-linear-gradient(90deg,
+            #555555 0rem, #555555 2.4rem, #eeeeee 2.4rem, #eeeeee 2.5rem);
+}
+
 .progress--striped {
-    background: repeating-linear-gradient(315deg, 
+    background: repeating-linear-gradient(315deg,
             #eeeeee 0rem, #eeeeee 1rem, #555555 1rem, #555555 2rem);
 }
 
