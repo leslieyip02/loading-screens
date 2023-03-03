@@ -6,9 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Ripple</title>
         <link rel="stylesheet" href="./styles.css">
+        <script src="index.js"></script>
     </head>
 
-    <body>
+    <body onload="insertPoints()">
         <div class="ripple">
             <div class="ripple__segment ripple__wave-1"></div>
             <div class="ripple__segment ripple__wave-2"></div>
@@ -18,5 +19,6 @@
             <div class="ripple__segment ripple__wave-2"></div>
             <div class="ripple__segment ripple__wave-1"></div>
         </div>
+        <div id="sinusoidal" class="ripple"></div>
     </body>
 </html>
