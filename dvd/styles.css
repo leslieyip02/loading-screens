@@ -8,11 +8,12 @@ html {
 body {
     margin: 0;
     height: 100%;
-    background-color: #dddddd;
+    background-color: #000000;
 }
 
 #dvd {
     position: absolute;
     width: 10rem;
     height: auto;
+    filter: invert(22%) sepia(54%)  saturate(6762%) hue-rotate(353deg) brightness(91%)  contrast(126%);
 }
