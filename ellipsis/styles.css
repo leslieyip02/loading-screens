@@ -1,0 +1,106 @@
+:root {
+    --t: 4s;
+}
+
+html {
+    margin: 0rem;
+    padding: 0rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0rem;
+    height: 100%;
+    padding: 5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+}
+
+.ellipsis {
+    width: fit-content;
+    margin: auto;
+    display: flex;
+}
+
+.dot {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    opacity: 100%;
+}
+
+.dot--appear-25 {
+    animation: appear-25 var(--t) infinite;
+}
+
+.dot--appear-50 {
+    animation: appear-50 var(--t) infinite;
+}
+
+.dot--appear-75 {
+    animation: appear-75 var(--t) infinite;
+}
+
+@keyframes appear-25 {
+    0% {
+        opacity: 0%;
+    }
+
+    25% {
+        opacity: 100%;
+    }
+
+    75% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes appear-50 {
+    0% {
+        opacity: 0%;
+    }
+
+    25% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    75% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes appear-75 {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    75% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
